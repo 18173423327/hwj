@@ -113,7 +113,4 @@ public class SeekInformation {
     	pstmt.setString(6, salary);
     	pstmt.executeUpdate();
     }
-	public static void main(String[] args) throws Exception {
-    	//queryJobseeker();
-    }
 }

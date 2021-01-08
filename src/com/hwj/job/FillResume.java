@@ -49,18 +49,6 @@ public class FillResume extends JFrame{
 		phone.setForeground(Color.green);
 		this.add(phone);
 
-//		JLabel email = new JLabel("邮箱");
-//		email.setBounds(322, 220, 30, 25);
-//		email.setFont(new Font(null, Font.PLAIN, 14));
-//		email.setForeground(Color.green);
-//		this.add(email);
-
-//		JLabel school = new JLabel("学校");
-//		school.setBounds(322, 260, 60, 25);
-//		school.setFont(new Font(null, Font.PLAIN, 14));
-//		school.setForeground(Color.green);
-//		this.add(school);
-
 		JLabel major = new JLabel("专业");
 		major.setBounds(322, 310, 60, 25);
 		major.setFont(new Font(null, Font.PLAIN, 14));
@@ -73,12 +61,6 @@ public class FillResume extends JFrame{
 		salary.setForeground(Color.green);
 		this.add(salary);
 
-//		JLabel comment = new JLabel("个人评价");
-//		comment.setBounds(300, 380, 60, 25);
-//		comment.setFont(new Font(null, Font.PLAIN, 14));
-//		comment.setForeground(Color.green);
-//		this.add(comment);
-		
 		JTextField name2 = new JTextField();
 		name2.setBounds(380, 110, 120, 25);
 		this.add(name2);
@@ -95,14 +77,6 @@ public class FillResume extends JFrame{
 		phone2.setBounds(380, 260, 120, 25);
 		this.add(phone2);
 
-//		JTextField email2 = new JTextField();
-//		email2.setBounds(380, 220, 120, 25);
-//		this.add(email2);
-		
-//		JTextField school2 = new JTextField();
-//		school2.setBounds(380, 370, 120, 25);
-//		this.add(school2);
-
 		JTextField major2 = new JTextField();
 		major2.setBounds(380, 310, 120, 25);
 		this.add(major2);
@@ -110,11 +84,6 @@ public class FillResume extends JFrame{
 		JTextField salary2 = new JTextField();
 		salary2.setBounds(380, 360, 120, 25);
 		this.add(salary2);
-
-//		JTextArea comment2 = new JTextArea();
-//		comment2.setBounds(380, 380, 220, 50);
-//		this.add(comment2);
-
 
 		JButton IA = new JButton("保存");
 		IA.setBounds(322, 420, 60, 25);
@@ -138,7 +107,6 @@ public class FillResume extends JFrame{
 			}
 		});
 		// 保存
-		//System.out.println(ps1+"----");
 		IA.addActionListener(new ActionListener() {
 			//@Override
 			public void actionPerformed(ActionEvent e) {
@@ -147,11 +115,8 @@ public class FillResume extends JFrame{
 				String ps2 = sex2.getText();
 				String ps3=age2.getText();
 				String ps4=phone2.getText();
-//				String ps5=email2.getText();
-//				String ps6=school2.getText();
 				String ps5=major2.getText();
 				String ps6=salary2.getText();
-				//String ps9=comment2.getText();
 				if(ps1.equals("")||ps2.equals("")||ps3.equals("")||ps4.equals("")||ps5.equals("")||ps6.equals("")) {
 					JOptionPane.showMessageDialog(null,"请把信息填写完整");
 				}
@@ -175,8 +140,6 @@ public class FillResume extends JFrame{
 				sex2.setText(null);
 				age2.setText(null);
 				phone2.setText(null);
-//				email2.setText(null);
-//				school2.setText(null);
 				major2.setText(null);
 				salary2.setText(null);
 			}

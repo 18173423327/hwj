@@ -1,5 +1,6 @@
 package com.hwj.job;
 import java.awt.Color;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,7 +17,6 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import com.hwj.dao.LoginSQL;
-import com.hwj.dao.RegisterSQL;
 public class Register extends JFrame{
 
 	public Register() {
@@ -124,10 +124,10 @@ public class Register extends JFrame{
 						}
 						if (flag == false) {
 							User2.setText(null);
-							JOptionPane.showMessageDialog(null, "账号已存在，请重新输入账号", "警告", JOptionPane.INFORMATION_MESSAGE);
+							JOptionPane.showMessageDialog(null, "该账号已存在，请重新输入账号", "警告", JOptionPane.INFORMATION_MESSAGE);
 						} else {
 							if (password.equals(password2)) {
-								new RegisterSQL().insertJobseeker(LoginID, password);
+								new LoginSQL().insertJobseeker(LoginID, password);
 								dispose();
 								JOptionPane.showMessageDialog(null, "注册成功");
 								new Login();
@@ -153,7 +153,7 @@ public class Register extends JFrame{
 							JOptionPane.showMessageDialog(null, "账号已存在，请重新输入账号", "警告", JOptionPane.INFORMATION_MESSAGE);
 						} else {
 							if (password.equals(password2)) {
-								new RegisterSQL().insertCompany(LoginID, password);
+								new LoginSQL().insertCompany(LoginID, password);
 								dispose();
 								JOptionPane.showMessageDialog(null, "注册成功");
 								new Login();

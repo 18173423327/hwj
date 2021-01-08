@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.swing.BorderFactory;
@@ -19,6 +20,8 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+
+import com.hwj.dao.PersonalInformation;
 public class ResumeInformation {
     public ResumeInformation() {
     	init();
@@ -44,26 +47,65 @@ public class ResumeInformation {
 		frame.add(butB);
 		frame.add(butC);
 		frame.add(return1);
+		
 		butA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				frame.dispose();
-			new FillResume();
+				ResultSet rs = null;
+				try {
+					rs=new PersonalInformation().queryResume();
+					if(rs.next()) {
+						JOptionPane.showMessageDialog(null, "简历已存在，不必重复填写", "警告",
+								JOptionPane.INFORMATION_MESSAGE);
+					}else {
+						new FillResume();
+					}
+				} catch (Exception e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
 			}
 		});
 		butB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				frame.dispose();
-				new UpdateResume();
-				
+				ResultSet rs = null;
+				try {
+					rs=new PersonalInformation().queryResume();
+					if(rs.next()) {
+						new UpdateResume();
+					}else {
+						JOptionPane.showMessageDialog(null, "简历还未填写，请先去填写", "警告",
+								JOptionPane.INFORMATION_MESSAGE);
+						new FillResume();
+					}
+				} catch (Exception e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
 			}
 		});
 		butC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				frame.dispose();
-			new CheckResume();
+				ResultSet rs = null;
+				try {
+					rs=new PersonalInformation().queryResume();
+					if(rs.next()) {
+						new CheckResume();
+					}else {
+						JOptionPane.showMessageDialog(null, "简历还未填写，请先去填写", "警告",
+								JOptionPane.INFORMATION_MESSAGE);
+						new FillResume();
+					}
+				} catch (Exception e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
+			
 			}
 		});
 		return1.addActionListener(new ActionListener() {

@@ -16,11 +16,9 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import com.hwj.dao.LoginSQL;
 public class Login extends JFrame {
-	
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		new Login();
 	}
-	
 	public Login() {
 		Content();
 		this.setTitle("招聘求职管理系统");
@@ -195,4 +193,3 @@ public class Login extends JFrame {
 		});
 	}
 }
-//没有填写还没判断

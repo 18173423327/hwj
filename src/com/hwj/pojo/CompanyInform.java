@@ -1,17 +1,17 @@
 package com.hwj.pojo;
 
-public class CompanyInformation {
+public class CompanyInform {
 	private String name;
 	private String major;
 	private String salary;
 	private String num;
 	private String address;
 
-	public CompanyInformation() {
+	public CompanyInform() {
 		super();
 	}
 
-	public CompanyInformation(String name, String major, String salary, String num, String address) {
+	public CompanyInform(String name, String major, String salary, String num, String address) {
 		super();
 		this.name = name;
 		this.major = major;
@@ -63,7 +63,7 @@ public class CompanyInformation {
 	@Override
 	public String toString() {
 		return "CompanyInformation [name=" + name + ", major=" + major + ", salary=" + salary + ", num=" + num
-				+ ", address=" + address + "]";
+				+ ", address=" + address + "]\n";
 	}
 
 }

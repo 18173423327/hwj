@@ -31,7 +31,7 @@ public class CheckCompany extends JFrame{
 		ResultSet rs = null;
 		try {
 			rs=new PersonalInformation().queryCompany();
-			
+			rs.next();
 		} catch (Exception e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
@@ -58,36 +58,6 @@ public class CheckCompany extends JFrame{
 		password.setForeground(Color.green);
 		this.add(password);
 
-//		JLabel age = new JLabel("年龄");
-//		age.setBounds(322, 220, 30, 25);
-//		age.setFont(new Font(null, Font.PLAIN, 14));
-//		age.setForeground(Color.green);
-//		this.add(age);
-//
-//		JLabel phone = new JLabel("电话");
-//		phone.setBounds(322, 270, 30, 25);
-//		phone.setFont(new Font(null, Font.PLAIN, 14));
-//		phone.setForeground(Color.green);
-//		this.add(phone);
-//
-//		JLabel email = new JLabel("邮箱");
-//		email.setBounds(322, 320, 30, 25);
-//		email.setFont(new Font(null, Font.PLAIN, 14));
-//		email.setForeground(Color.green);
-//		this.add(email);
-//
-//		JLabel password = new JLabel("账号密码");
-//		password.setBounds(300, 370, 60, 25);
-//		password.setFont(new Font(null, Font.PLAIN, 14));
-//		password.setForeground(Color.green);
-//		this.add(password);
-//
-//		JLabel comment = new JLabel("专业");
-//		comment.setBounds(322, 360, 60, 25);
-//		comment.setFont(new Font(null, Font.PLAIN, 14));
-//		comment.setForeground(Color.green);
-//		this.add(comment);
-
 		JLabel id2 = new JLabel(rs.getString(1));
 		id2.setBounds(380, 120, 220, 25);
 		this.add(id2);
@@ -95,38 +65,6 @@ public class CheckCompany extends JFrame{
 		JLabel password2 = new JLabel(rs.getString(2));
 		password2.setBounds(380, 170, 220, 25);
 		this.add(password2);
-
-//		JLabel age2 = new JLabel(rs.getString(3));
-//		age2.setBounds(380, 220, 220, 25);
-//		this.add(age2);
-//
-//		JLabel phone2 = new JLabel(rs.getString(4));
-//		phone2.setBounds(380, 270, 220, 25);
-//		this.add(phone2);
-//
-//		JLabel email2 = new JLabel(rs.getString(5));
-//		email2.setBounds(380, 320, 220, 25);
-//		this.add(email2);
-//		
-//		JLabel password2=new JLabel(rs.getString(6));
-//		password2.setBounds(380,370,220,25);
-//		this.add(password2);
-		
-//		JButton IA = new JButton("保存");
-//		IA.setBounds(322, 420, 60, 25);
-//		this.add(IA);
-//
-//		JButton IB = new JButton("重置");//看看恢复可以不
-//		IB.setBounds(450, 420, 60, 25);
-//		this.add(IB);
-
-//		JTextField salary2 = new JTextField();
-//		salary2.setBounds(380, 320, 120, 25);
-//		this.add(salary2);
-//
-//		JTextField comment2 = new JTextField();
-//		comment2.setBounds(380, 360, 120, 25);
-//		this.add(comment2);
 
 		JButton return1 = new JButton("返回");
 		return1.setBounds(10, 10, 60, 25);
@@ -141,43 +79,5 @@ public class CheckCompany extends JFrame{
 				new CompanyInformation();
 			}
 		});
-		// 保存
-		//System.out.println(ps1+"----");
-//		IA.addActionListener(new ActionListener() {
-//			//@Override
-//			public void actionPerformed(ActionEvent e) {
-//				// TODO Auto-generated method stub
-//				String ps1 = name2.getText();
-//				String ps2 = sex2.getText();
-//				String ps3=age2.getText();
-//				String ps4=phone2.getText();
-//				String ps5=email2.getText();
-//				if(ps1.equals("")||ps1.equals("")||ps1.equals("")||ps1.equals("")||ps1.equals("")) {
-//					JOptionPane.showMessageDialog(null,"请把信息填写完整");
-//				}
-//				else {
-//					try {
-//					//new PersonalInformation().insertJobseeker(ps1,ps2,ps3,ps4,ps5);
-//				} catch (Exception e1) {
-//					// TODO Auto-generated catch block
-//					e1.printStackTrace();
-//				}
-//				JOptionPane.showMessageDialog(null,"保存成功");
-//			}
-//		}		
-//	});
-//		// 重置
-//		IB.addActionListener(new ActionListener() {
-//			@Override
-//			public void actionPerformed(ActionEvent e) {
-//				// TODO Auto-generated method stub
-//				name2.setText(null);
-//				sex2.setText(null);
-//				age2.setText(null);
-//				phone2.setText(null);
-//				email2.setText(null);
-//				password2.setText(null);
-//			}
-//		});
 	}
 }

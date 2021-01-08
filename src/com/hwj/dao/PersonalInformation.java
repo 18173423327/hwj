@@ -68,7 +68,7 @@ public class PersonalInformation {
     	Statement pstmt=conn.createStatement();
     	ResultSet rs=null;
     	rs=pstmt.executeQuery(sql);
-    	rs.next();
+    	//rs.next();
     	   return rs;
     }
     public static ResultSet queryResume()throws Exception {
@@ -77,7 +77,7 @@ public class PersonalInformation {
     	String sql="select * from JobInformation where LoginID='"+LT.LoginID+"'";
     	ResultSet rs=null;
     	rs=stmt.executeQuery(sql);
-    	rs.next();
+    	//rs.next();
     	   return rs;
     }
     public static ResultSet queryCompany()throws Exception{
@@ -86,7 +86,7 @@ public class PersonalInformation {
     	String sql="select * from CompanyLogin where LoginID='"+LT.LoginID+"'";
     	ResultSet rs=null;
     	rs=stmt.executeQuery(sql);
-    	rs.next();
+    	//rs.next();
     		return rs;
     }
     public static void insertJobseeker(String name,String sex,String age,String phone,String major,String salary)throws Exception {
@@ -123,10 +123,14 @@ public class PersonalInformation {
     	pstmt.setString(3, salary);
     	pstmt.setString(4, num);
     	pstmt.setString(5, address);
-    	//pstmt.setString(6, salary);
     	pstmt.executeUpdate();
     }
-	public static void main(String[] args) throws Exception {
-    	//queryJobseeker();
-    }
+//    public static void deleteJobseeker(String LoginID) throws Exception {
+//    	Connection conn=init();
+//    	String sql="delete JobseekerLogin where LoginID=?";
+//    	PreparedStatement pstmt=conn.prepareStatement(sql);
+//    	pstmt.setString(1, LoginID);
+//    	pstmt.executeUpdate();
+//    }
+	
 }

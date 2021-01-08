@@ -40,8 +40,8 @@ public class Company extends JFrame {
 		IC.setForeground(Color.red);
 		this.add(IC);
 		
-		JButton return1=new JButton("·µ»Ø");
-		return1.setBounds(10, 10, 60, 25);
+		JButton return1=new JButton("ÍË³öµÇÂ¼");
+		return1.setBounds(10, 10, 100, 25);
 		this.add(return1);
 		//·µ»Ø
 		return1.addActionListener(new ActionListener(){

@@ -27,6 +27,7 @@ public class CheckResume extends JFrame{
 		ResultSet rs = null;
 		try {
 			rs=new PersonalInformation().queryResume();
+			rs.next();
 		} catch (Exception e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
@@ -77,36 +78,6 @@ public class CheckResume extends JFrame{
 		salary.setForeground(Color.green);
 		this.add(salary);
 
-//		JLabel age = new JLabel("年龄");
-//		age.setBounds(322, 220, 30, 25);
-//		age.setFont(new Font(null, Font.PLAIN, 14));
-//		age.setForeground(Color.green);
-//		this.add(age);
-//
-//		JLabel phone = new JLabel("电话");
-//		phone.setBounds(322, 270, 30, 25);
-//		phone.setFont(new Font(null, Font.PLAIN, 14));
-//		phone.setForeground(Color.green);
-//		this.add(phone);
-//
-//		JLabel email = new JLabel("邮箱");
-//		email.setBounds(322, 320, 30, 25);
-//		email.setFont(new Font(null, Font.PLAIN, 14));
-//		email.setForeground(Color.green);
-//		this.add(email);
-//
-//		JLabel password = new JLabel("账号密码");
-//		password.setBounds(300, 370, 60, 25);
-//		password.setFont(new Font(null, Font.PLAIN, 14));
-//		password.setForeground(Color.green);
-//		this.add(password);
-//
-//		JLabel comment = new JLabel("专业");
-//		comment.setBounds(322, 360, 60, 25);
-//		comment.setFont(new Font(null, Font.PLAIN, 14));
-//		comment.setForeground(Color.green);
-//		this.add(comment);
-
 		JLabel name2 = new JLabel(rs.getString(1));
 		name2.setBounds(380, 110, 220, 25);
 		this.add(name2);
@@ -130,22 +101,6 @@ public class CheckResume extends JFrame{
 		JLabel salary2=new JLabel(rs.getString(6));
 		salary2.setBounds(380,360,220,25);
 		this.add(salary2);
-		
-//		JButton IA = new JButton("保存");
-//		IA.setBounds(322, 420, 60, 25);
-//		this.add(IA);
-//
-//		JButton IB = new JButton("重置");//看看恢复可以不
-//		IB.setBounds(450, 420, 60, 25);
-//		this.add(IB);
-
-//		JTextField salary2 = new JTextField();
-//		salary2.setBounds(380, 320, 120, 25);
-//		this.add(salary2);
-//
-//		JTextField comment2 = new JTextField();
-//		comment2.setBounds(380, 360, 120, 25);
-//		this.add(comment2);
 
 		JButton return1 = new JButton("返回");
 		return1.setBounds(10, 10, 60, 25);
@@ -160,43 +115,5 @@ public class CheckResume extends JFrame{
 				new ResumeInformation();
 			}
 		});
-		// 保存
-		//System.out.println(ps1+"----");
-//		IA.addActionListener(new ActionListener() {
-//			//@Override
-//			public void actionPerformed(ActionEvent e) {
-//				// TODO Auto-generated method stub
-//				String ps1 = name2.getText();
-//				String ps2 = sex2.getText();
-//				String ps3=age2.getText();
-//				String ps4=phone2.getText();
-//				String ps5=email2.getText();
-//				if(ps1.equals("")||ps1.equals("")||ps1.equals("")||ps1.equals("")||ps1.equals("")) {
-//					JOptionPane.showMessageDialog(null,"请把信息填写完整");
-//				}
-//				else {
-//					try {
-//					//new PersonalInformation().insertJobseeker(ps1,ps2,ps3,ps4,ps5);
-//				} catch (Exception e1) {
-//					// TODO Auto-generated catch block
-//					e1.printStackTrace();
-//				}
-//				JOptionPane.showMessageDialog(null,"保存成功");
-//			}
-//		}		
-//	});
-//		// 重置
-//		IB.addActionListener(new ActionListener() {
-//			@Override
-//			public void actionPerformed(ActionEvent e) {
-//				// TODO Auto-generated method stub
-//				name2.setText(null);
-//				sex2.setText(null);
-//				age2.setText(null);
-//				phone2.setText(null);
-//				email2.setText(null);
-//				password2.setText(null);
-//			}
-//		});
 	}
 }

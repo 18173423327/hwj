@@ -25,7 +25,7 @@ public class Jobinformation {
     }
        
 	public void init() {		
-		JFrame frame=new JFrame("个人信息");
+		JFrame frame=new JFrame("个人信息中心");
 		JButton butA=new JButton("修改信息");
 		JButton butB=new JButton("查看信息");
 		JButton return1=new JButton("返回");

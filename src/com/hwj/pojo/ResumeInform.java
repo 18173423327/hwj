@@ -1,5 +1,5 @@
 package com.hwj.pojo;
-public class ResumeInformation {
+public class ResumeInform {
 	private String name;
 	private String sex;
 	private String age;
@@ -7,11 +7,11 @@ public class ResumeInformation {
 	private String major;
 	private String salary;
 
-	public ResumeInformation() {
+	public ResumeInform() {
 		super();
 	}
 
-	public ResumeInformation(String name, String sex, String age, String phone, String major, String salary) {
+	public ResumeInform(String name, String sex, String age, String phone, String major, String salary) {
 		super();
 		this.name = name;
 		this.sex = sex;
